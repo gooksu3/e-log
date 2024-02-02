@@ -1,0 +1,88 @@
+@import "reset.css";
+@import "variables.css";
+@import "ship-card.css";
+
+body{
+    height:100vh;
+    width:100vw;
+}
+main{
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+    background-color: #9d9d9d;
+    box-sizing: border-box;
+}
+.section{
+    height:92vh;
+    /* border:var(--ship-card-border); */
+    border-radius: 10px;
+    box-shadow: 1px 4px 3px 3px rgba(0, 0, 0, 0.2);
+    width:25vw;
+    margin:5px;
+    box-sizing: border-box;
+    overflow-y:scroll;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--section-background-color);
+}
+.section::-webkit-scrollbar{
+    /* display:none; */
+    width:10px;
+}
+.section::-webkit-scrollbar-thumb{
+    background:rgb(95, 147, 231);
+    border-radius: 10px;
+    padding:1px;
+    min-height: 75vh;
+    border: 2px solid #e8e8e8;
+}
+.section::-webkit-scrollbar-button:vertical:start:decrement,
+.section::-webkit-scrollbar-button:vertical:end:decrement{
+    display:block;
+    height:4px;
+}
+.invisilbe{
+    display:none;
+}
+.section__title{
+	font-size:20px;
+	background-color: white;
+	border-radius: 20px;
+	padding:5px 20px;
+    margin-top:10px;
+    box-shadow: 4px 3px 4px 1px rgba(0, 0, 0, 0.2);
+}
+.none{
+    display:none;
+}
+.transparent_bg{
+    background-color: rgba(0, 0, 0, 0.5);
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.window_input_info{
+    width:50%;
+    height:50%;
+}
+.input_window_header{
+    display:flex;
+    justify-content: flex-end;
+}
+.close_window_input_info{
+    font-size: 50px;
+    color:rgb(244, 244, 244);
+    margin:20px;
+}
+.window_input_info{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}

@@ -1,0 +1,6 @@
+:root{
+    --section-background-color: #e8e8e8;
+    /* 입항,출항,통과,이동 섹션 쪽 bow-shadow값을 달리해서 변수로 저장 */
+    --info-btn-box-shadow:1px 1px 1px 0px rgba(0, 0, 0, 0.2);
+    
+}

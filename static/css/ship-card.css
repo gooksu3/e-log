@@ -1,0 +1,58 @@
+.ship-card{
+    height:10vh;
+    width:22vw;
+    display:flex;
+    padding:4px;
+    box-sizing: border-box;
+    background-color: #FAFAFA;
+    margin-top:0.5vh;
+    border-radius: 7px;
+    box-shadow: 1px 4px 3px 3px rgba(0, 0, 0, 0.2);
+    margin-top:10px;
+}
+.onsan{
+    background-color: greenyellow;
+}
+.main-port{
+    background-color: rgb(241, 241, 39);
+}
+.outbound{
+    background-color: rgb(241, 241, 39);
+}
+.ship-card__name-n-callsign{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: flex-start;
+    width:60%;
+}
+.ship-card__info{
+    width:40%;
+    padding:4px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+.ship-card__symbol-box{
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.info-btn{
+    border:none;
+    border-radius:50%;
+    box-shadow:var(--info-btn-box-shadow);
+    color:white;
+}
+.ship-card__info-symbol{
+    background-color: cyan;
+    padding:4px 15px;
+    font-size:2.5vh;
+}
+.ship-card__unusual-symbol{
+    background-color: tomato;
+    font-size:3h;
+    padding:6px 15px;
+    margin-right:10px;
+}
+

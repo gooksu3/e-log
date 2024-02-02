@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Log</title>
+    <!-- html,css 다 수정하고 css폴더를 static으로 옮겨서 주석풀기 -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+</head>
+<body>
+    <header>
+        <button>Input Movement</button>
+    </header>
+    <main>
+        <ul id="inbound" class="section">
+            <span class="section__title">
+                입  항
+            </span>
+            <li class="ship-card onsan">
+                <div class="ship-card__name-n-callsign">
+                    <span class="ship-card__name">KMTC XXXXXX</span>
+                    <span class="ship-card__callsign">X9XXX</span>
+                </div>
+                <div class="ship-card__info">
+                    <form class="ship-card__symbol-box">
+                        <button class="ship-card__unusual-symbol info-btn">
+                            !
+                        </button>
+                        <button class="ship-card__info-symbol info-btn">
+                            i
+                        </button>
+                    </form>
+                    <div class="ship-card__from-to-to">
+                        <span class="ship-card__from-to-to__text">
+                            BS → UNCT3
+                        </span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul id="shifting" class="section">
+            <span class="section__title">
+                이  동
+            </span>
+            <li class="ship-card main-port">
+                <div class="ship-card__name-n-callsign">
+                    <span class="ship-card__name">광진월드7호<br>(+광진7001호)</span>
+                    <span class="ship-card__callsign">000000</span>
+                </div>
+                <div class="ship-card__info">
+                    <form class="ship-card__symbol-box">
+                        <button class="ship-card__unusual-symbol info-btn">
+                            !
+                        </button>
+                        <button class="ship-card__info-symbol info-btn">
+                            i
+                        </button>
+                    </form>
+                    <div class="ship-card__from-to-to">
+                        <span class="ship-card__from-to-to__text">
+                            이진 → HMD1
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="ship-card onsan">
+                <div class="ship-card__name-n-callsign">
+                    <span class="ship-card__name">울산107<br>(+울산8001호)</span>
+                    <span class="ship-card__callsign">000000</span>
+                </div>
+                <div class="ship-card__info">
+                    <form class="ship-card__symbol-box">
+                        <button class="ship-card__unusual-symbol info-btn">
+                            !
+                        </button>
+                        <button class="ship-card__info-symbol info-btn">
+                            i
+                        </button>
+                    </form>
+                    <div class="ship-card__from-to-to">
+                        <span class="ship-card__from-to-to__text">
+                            HMD1 → 이진
+                        </span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul id="outbound" class="section">
+            <span class="section__title">
+                출  항
+            </span>
+        </ul>
+        <ul id="passing" class="section">
+            <span class="section__title">
+                통과
+            </span>
+        </ul>
+    </main>
+    <div class="transparent_bg none">
+        <header class="input_window_header">
+            <span class="close_window_input_info">X</span>
+        </header>
+        <div class="window_input_info">
+            <input type="text" id="input_whole"/>
+            <form id="input_ship_info" method="get,post">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span>선명</span>
+                                <input name="ship_name" type="text" />
+                                <span>호출부호</span>
+                                <input name="calsign" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>선종</span>
+                                <input name="ship_type" type="text" />
+                                <span>총톤수</span>
+                                <input name="gross" type="text" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span>From</span>
+                            </td>
+                            <td>
+                                <span>To</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input name="last" type="text" />
+                            </td>
+                            <td>
+                                <input name="next" type="text" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input type="submit" value="submit"/>
+            </form>
+        </div>
+    </div>
+    <script src="{{url_for('static',filename='js/btns.js')}}"></script>
+</body>
+</html>
